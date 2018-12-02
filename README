@@ -1,1 +1,34 @@
+In order to install this conky on ubuntu.
 
+INSTALL CONKY
+sudo apt install conky conky-all conky-manager
+
+INSTALL GIT
+sudo apt install git
+
+Clone this project
+git clone https://github.com/maiorovaleksandr/ubuntu-conky.git
+
+Extract content of the file to home directory 
+cd ubuntu-conky
+cp -R * ~
+
+Detect how many cores are in your CPU
+cat /proc/cpuinfo | grep processor | wc -l
+or 
+nproc
+According to number of cores rename file matching data.
+
+For dual core 
+mv ~/.conkyrc-4core ~/.conkyrc
+
+For quad core
+mv ~/.conkyrc-8core ~/.conkyrc
+
+Activities > StartUp Progs 
+Add new
+
+Name Conky
+Command conky
+
+Reboot your computer.
