@@ -1,30 +1,31 @@
 In order to install this conky on ubuntu.
 
-INSTALL CONKY
-sudo apt install conky conky-all conky-manager
+**INSTALL CONKY**
+`sudo apt install conky conky-all conky-manager`
 
-INSTALL GIT
-sudo apt install git
+**INSTALL GIT**
+`sudo apt install git`
 
-Clone this project
-git clone https://github.com/maiorovaleksandr/ubuntu-conky.git
+**Clone this project**
+`git clone https://github.com/maiorovaleksandr/ubuntu-conky.git`
 
 Extract content of the file to home directory 
-cd ubuntu-conky
-cp -R * ~
+`cd ubuntu-conky`
+`cp -R * ~`
 
 Detect how many cores are in your CPU
-cat /proc/cpuinfo | grep processor | wc -l
+`cat /proc/cpuinfo | grep processor | wc -l`
 or 
-nproc
+`nproc`
 According to number of cores rename file matching data.
 
 For dual core 
-mv ~/.conkyrc-4core ~/.conkyrc
+`mv ~/.conkyrc-4core ~/.conkyrc`
 
 For quad core
-mv ~/.conkyrc-8core ~/.conkyrc
+`mv ~/.conkyrc-8core ~/.conkyrc`
 
+**In Order to Add to Startup**
 Activities > StartUp Progs 
 Add new
 
@@ -32,3 +33,38 @@ Name Conky
 Command conky
 
 Reboot your computer.
+****
+Ubuntuya Conky eklemek icin
+**CONKY KURULUMU**
+`sudo apt install conky conky-all conky-manager`
+
+**GIT  KURULUMU**
+`sudo apt install git`
+
+**Projeyi indirmek icin**
+`git clone https://github.com/maiorovaleksandr/ubuntu-conky.git`
+
+Butun dosyalari home klasore kopyalamak icin 
+`cd ubuntu-conky`
+`cp -R * ~`
+
+Islemciniz cekirdek sayisini ogrenmek icin
+`cat /proc/cpuinfo | grep processor | wc -l`
+veya 
+`nproc`
+
+Cekirdek sayisina gore asagidaki komutu uygulayiniz 
+4 Cekirdek icin
+`mv ~/.conkyrc-4core ~/.conkyrc`
+
+8 Cekirdek icin
+`mv ~/.conkyrc-8core ~/.conkyrc`
+
+**Acilista calistirmak icin**
+Activities > StartUp Progs 
+yeni ekle 
+
+isim Conky
+komut conky
+
+Yeniden baslatiniz
